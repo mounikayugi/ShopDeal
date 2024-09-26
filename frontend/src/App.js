@@ -7,7 +7,7 @@ import Product from './Pages/Product';
 import LoginSignup from './Pages/LoginSignup';
 import Cart from './Pages/Cart';
 import Footer from './Components/Footer/Footer';
-import men_banner from './Components/Assets/sale1.webp'
+import men_banner from './Components/Assets/offer_1.webp'
 import women_banner from './Components/Assets/offer_1.webp'
 import kid_banner from './Components/Assets/offer_1.webp'
 

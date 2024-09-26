@@ -16,7 +16,6 @@ const ShopContextProvider = (props) => {
     
     useEffect (()=>{
 
-        // error is coming from here okay
         fetch('http://localhost:4000/allproducts')
         .then((response)=> {
             if (!response.ok) {
@@ -47,17 +46,10 @@ const ShopContextProvider = (props) => {
             fetch('http://localhost:4000/addtocart',{
                 method:'POST',
                 headers:{
-                    // sending json dont use formdata instead use json 
                     Accept:'application/json',
                     'auth-token':`${localStorage.getItem('auth-token')}`,
-             //backend data in json right? 
-             //u r right but listen when we u uploading image file or any fil
-             //frontend is all_products.js 
-             // this is right code i need to change form data to json
                     'Content-Type':'application/json',
                 },
-                // spelling mistake here  JSON.stringify()
-                // body:JSON.stringify({"itemId":itemId}),  error here
                 body: JSON.stringify({"itemId": itemId}),
 
 
@@ -73,8 +65,6 @@ const ShopContextProvider = (props) => {
             fetch('http://localhost:4000/removefromcart',{
                 method:'POST',
                 headers:{
-                    //just comment out then change
-                    //yess doing that only for u to undertsand after easily dont worry
                     Accept:'application/form-data',
                     'auth-token':`${localStorage.getItem('auth-token')}`,
                     'Content-Type':'application/json',
@@ -117,13 +107,4 @@ const ShopContextProvider = (props) => {
 }
 export default ShopContextProvider
 
-
-/*
-
-
-Just for u to undertstand 
-json data + files png,jpg,jpeg  we are using form data
-json  application/json
-
-*/
  
