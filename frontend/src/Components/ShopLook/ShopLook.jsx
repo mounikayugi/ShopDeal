@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import './Popular.css'
+import './ShopLook.css'
 import Item from '../Item/Item'
 
-const Popular = () =>{
+const ShopLook = () =>{
 
     const [popularProducts,setPopularProducts] = useState([]);
     
@@ -12,10 +12,10 @@ const Popular = () =>{
         .then((data)=>setPopularProducts(data));
     },[])
     return (
-        <div className="popular">
+        <div className="shoplook">
             <h1>Shop the look</h1>
             <hr/>
-            <div className="popular-item">
+            <div className="shoplook-item">
                 {popularProducts.map((item,i)=>{
                     return <Item key={i} id={item.id} name={item.name} image={item.image} new_price={item.new_price} old_price={item.old_price} />
                 })}
@@ -24,4 +24,4 @@ const Popular = () =>{
     )
 }
 
-export default Popular
+export default ShopLook

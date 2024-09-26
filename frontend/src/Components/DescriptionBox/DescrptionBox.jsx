@@ -17,7 +17,6 @@ const DescriptionBox = ()  => {
                     transactions without the need for a physical presence. E-commerce
                     websites have gained immense popularity due to their convenion accessibility, and the global reach they offer.
                 </p>
-                <p></p>
             </div>
         </div>
     )

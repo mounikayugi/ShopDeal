@@ -1,16 +1,16 @@
 import React from 'react'
-import Hero from '../Components/Hero/Hero'
-import Popular from '../Components/Popular/Popular'
-import Offers from '../Components/Offers/Offers'
-import NewCollections from '../Components/NewCollections/NewCollections'
+import CrazyDeals from '../Components/CrazyDeals/CrazyDeals'
+import ShopLook from '../Components/ShopLook/ShopLook'
+import SuperDhamaka from '../Components/SuperDhamaka/SuperDhamaka'
+import ChampionCategories from '../Components/ChampionCategories/ChampionCategories'
 
 const Shop = () => {
     return (
         <div>
-           <Hero/>
-           <Popular/>
-           <Offers/>
-           <NewCollections/>
+           <CrazyDeals/>
+           <ShopLook/>
+           <SuperDhamaka/>
+           <ChampionCategories/>
         </div>
     )
 }

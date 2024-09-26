@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import './NewCollections.css'
+import './ChampionCategories.css'
 import Item from '../Item/Item'
 
-const NewCollections = () => {
+const ChampionCategories = () => {
 
      const [new_collection, setNew_collection] = useState([]);
 
@@ -12,7 +12,7 @@ const NewCollections = () => {
         .then((data)=>setNew_collection(data));
      },[])
     return (
-        <div className="newcollections">
+        <div className="championcategories">
             <h1>Champion Categories</h1>
             <hr/>
             <div className="collections">
@@ -24,4 +24,4 @@ const NewCollections = () => {
     )
 }
 
-export default NewCollections
+export default ChampionCategories

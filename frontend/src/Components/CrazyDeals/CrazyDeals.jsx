@@ -1,14 +1,14 @@
 import React from 'react'
-import './Hero.css'
+import './CrazyDeals.css'
 import arrow_icon from '../Assets/arrow.png'
 import offers_calvin from '../Assets/slider1.jpg'
 import offer_w from '../Assets/slider2.png'
 import offer_h from '../Assets/slider3.png'
 import offer_t from '../Assets/slider4.jpg'
 
-const Hero = () => {
+const CrazyDeals = () => {
     return (
-        <div className='hero'>
+        <div className='crazydeals'>
            <h1>CRAZY DEALS</h1>
            <hr/>
             <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">    
@@ -40,7 +40,7 @@ const Hero = () => {
                   <span class="sr-only">Next</span>
                 </a>
             </div>
-            <div className="hero-latest-btn">
+            <div className="crazydeals-latest-btn">
                 <div>Shop Now</div>
                 <img onClick=""src={arrow_icon} alt="" />
             </div>
@@ -48,4 +48,4 @@ const Hero = () => {
     )
 }
 
-export default Hero
+export default CrazyDeals

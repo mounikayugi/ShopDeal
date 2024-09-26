@@ -1,4 +1,4 @@
-.offers{
+.superdhamaka{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,89 +6,89 @@
     gap: 10px;
     height: 60vh;
 }
-.offers hr{
+.superdhamaka hr{
     width: 200px;
     height: 4px;
     border-radius: 10px;
     background-color: #252525;
 }
-.offers h1{
+.superdhamaka h1{
     padding-right: 40px;
     color: #171717;
     font-size: 40px;
     font-weight: 600;
     font-style: italic;
 }
-.offers_img img{
+.superdhamaka_img img{
     padding-right: 20px;
     height: 250px;
     width: 500px;  
 }
 @media(max-width:1280px){
-    .offers{
+    .superdhamaka{
         margin-top: 30px;
         margin-bottom: 70px;
     }
-    .offers h1{
+    .superdhamaka h1{
         font-size: 40px;
     }
-    .offers hr{
+    .superdhamaka hr{
         width: 200px;
         height: 4px;
     }
-    .offers_img img{     
+    .superdhamaka_img img{     
         height: 250px;
         width: 450px;
     }
 }
 @media(max-width:1024px){
-    .offers{
+    .superdhamaka{
         margin-top: 30px;
         margin-bottom: 70px;
         height: 40vh;
     }
-    .offers h1{
+    .superdhamaka h1{
         font-size: 30px;
     }
-    .offers hr{
+    .superdhamaka hr{
         width: 120px;
         height: 3px;
     }
-    .offers_img img{     
+    .superdhamaka_img img{     
         height: 200px;
         width: 300px;
     }
 }
 @media(max-width:800px){
-    .offers{
+    .superdhamaka{
         margin-top: 30px;
         margin-bottom: 30px;
     }
-    .offers h1{
+    .superdhamaka h1{
         font-size: 22px;
     }
-    .offers hr{
+    .superdhamaka hr{
         width: 100px;
         height: 2px;
     }
-    .offers_img img{     
+    .superdhamaka_img img{     
         height: 200px;
         width: 200px;
     }
 }
 @media(max-width:500px){
-    .offers{
+    .superdhamaka{
         height: 30vh;
         margin-top: 30px;
         margin-bottom: 50px;
     }
-    .offers h1{
+    .superdhamaka h1{
         font-size: 16px;
     }
-    .offers hr{
+    .superdhamaka hr{
         height: 2px;
     }
-    .offers_img img{     
+    .superdhamaka_img img{     
         height: 150px;
         width: 150px;
     }

@@ -1,14 +1,14 @@
 import React from 'react'
-import './Offers.css'
+import './SuperDhamaka.css'
 import offer1 from '../Assets/sale_1.jpeg'
 import offer2 from '../Assets/offer3.jpeg'
 
-const Offers = () => {
+const SuperDhamaka = () => {
     return (
-        <div className="offers">
+        <div className="superdhamaka">
         <h1>Super Dhamaka Deals</h1>
         <hr/>
-        <div className="offers_img">
+        <div className="superdhamaka_img">
             <img src={offer1} alt="" />
             <img src={offer2} alt="" />
         </div>
@@ -16,4 +16,4 @@ const Offers = () => {
     )
 }
 
-export default Offers
+export default SuperDhamaka
