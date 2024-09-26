@@ -16,7 +16,7 @@ const LoginSignup = () => {
      const login = async () => {
         console.log("Login Function Executed",formData);
         let responseData;
-        await fetch('https://upgrad-capstone-project-backend.onrender.com',
+        await fetch('https://upgrad-capstone-project-backend.onrender.com/login',
             {
             method:'POST',
             headers:{
@@ -38,7 +38,7 @@ const LoginSignup = () => {
      const signup = async () => {
         console.log("Signup Function Executed",formData);
          let responseData;
-        await fetch('https://upgrad-capstone-project-backend.onrender.com',
+        await fetch('https://upgrad-capstone-project-backend.onrender.com/signup',
             {
             method:'POST',
             headers:{
