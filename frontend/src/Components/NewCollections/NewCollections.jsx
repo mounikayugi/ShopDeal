@@ -7,7 +7,7 @@ const NewCollections = () => {
      const [new_collection, setNew_collection] = useState([]);
 
      useEffect(()=>{
-        fetch('https://upgrad-capstone-project-backend.onrender.com')
+        fetch('https://upgrad-capstone-project-backend.onrender.com/newcollections')
         .then((response)=>response.json())
         .then((data)=>setNew_collection(data));
      },[])
