@@ -7,7 +7,7 @@ const Popular = () =>{
     const [popularProducts,setPopularProducts] = useState([]);
     
     useEffect(()=>{
-        fetch('https://upgrad-capstone-project-backend.onrender.com')
+        fetch('https://upgrad-capstone-project-backend.onrender.com/popularinwomen')
         .then((response)=>response.json())
         .then((data)=>setPopularProducts(data));
     },[])
