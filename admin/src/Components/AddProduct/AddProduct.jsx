@@ -27,7 +27,7 @@ const AddProduct = () => {
          let formData = new FormData();
          formData.append('product',image);
     //     console.log(formData);
-         await fetch('http://localhost:4000/upload',{
+         await fetch('https://upgrad-capstone-project-backend.onrender.com/upload',{
              method:'POST',
              headers:{
                  Accept:'application/json',
@@ -39,10 +39,7 @@ const AddProduct = () => {
            if(responseData.success)
            {            
              product.image = responseData.image_url;
-      
-                 console.log(product);//error6:58:00//image url
-
-                await fetch('http://localhost:4000/addproduct',{
+                await fetch('https://upgrad-capstone-project-backend.onrender.com/addproduct',{
                     method:'POST',
                     headers:{
                         Accept:'application/json',
