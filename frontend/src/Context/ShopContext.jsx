@@ -16,7 +16,7 @@ const ShopContextProvider = (props) => {
     
     useEffect (()=>{
 
-        fetch('https://upgrad-capstone-project-backend.onrender.com')
+        fetch('https://upgrad-capstone-project-backend.onrender.com/allproducts')
         .then((response)=> {
             if (!response.ok) {
               throw new Error(`HTTP error! status: ${response.status}`);
@@ -26,7 +26,7 @@ const ShopContextProvider = (props) => {
         .then((data)=>setAll_Product(data))
 
         if(localStorage.getItem('auth-token')){
-            fetch('https://upgrad-capstone-project-backend.onrender.com',{
+            fetch('https://upgrad-capstone-project-backend.onrender.com/getcart',{
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',
@@ -43,7 +43,7 @@ const ShopContextProvider = (props) => {
     const addToCart = (itemId) => {
         setCartItems((prev)=>({...prev,[itemId]:prev[itemId]+1}));
         if(localStorage.getItem('auth-token')){
-            fetch('https://upgrad-capstone-project-backend.onrender.com',{
+            fetch('https://upgrad-capstone-project-backend.onrender.com/addtocart',{
                 method:'POST',
                 headers:{
                     Accept:'application/json',
@@ -62,7 +62,7 @@ const ShopContextProvider = (props) => {
     const removeFromCart = (itemId) => {
         setCartItems((prev)=>({...prev,[itemId]:prev[itemId]-1}));
         if(localStorage.getItem('auth-token')){
-            fetch('https://upgrad-capstone-project-backend.onrender.com',{
+            fetch('https://upgrad-capstone-project-backend.onrender.com/removefromcart',{
                 method:'POST',
                 headers:{
                     Accept:'application/form-data',
