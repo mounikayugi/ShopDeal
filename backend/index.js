@@ -4,9 +4,10 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
-const multer = require("multer");
-const path =  require("path");
+// const multer = require("multer");
+// const path =  require("path");
 const cors = require("cors");
+const upload = require("./utils/cloudinary.js");
 
 app.use(express.json());
 // app.use(cors()); 
@@ -14,6 +15,7 @@ app.use(express.json());
 //     origin:"http://localhost:3000",
 // }));
 app.use(cors(corsOpts));
+
 //Database connection with MongoDB
 mongoose.connect("mongodb+srv://mounika:07070707@cluster0.saiyy5f.mongodb.net/e-commerce");
 
@@ -23,7 +25,7 @@ app.get("/",(req,res)=>{
 })
 
 //Image storage Engine
-
+/*
 const storage = multer.diskStorage({
     destination: './upload/images',
     filename:(req,file,cb)=>{
@@ -32,15 +34,32 @@ const storage = multer.diskStorage({
 }) 
 
  const upload =  multer({storage:storage}) 
-
+ app.use('/images',express.static('upload/images'))
+*/
  //Creating  Upload Endpoint for images
-app.use('/images',express.static('upload/images'))
 
-app.post("/upload",upload.single('product'),(req,res)=>{
-  res.json({ 
-    success:1,
-    image_url:`http://localhost:${port}/images/${req.file.filename}`
-  })  
+app.post("/upload",upload.single("product"),(req,res)=>{
+
+console.log("becaus we are using file",req.file);
+    try {
+        if (!req.file) {
+          return res.status(400).json({ success: 0, message: "No file uploaded" });
+        }
+    
+        const result = req.file; // This should contain file details from Multer/Cloudinary
+        console.log(result);
+        res.json({
+          success: 1,
+          image_url: result.path, // Cloudinary gives the uploaded image URL in 'path'
+        });
+      } catch (error) {
+        console.error("Error uploading image:", error);
+        res.status(500).json({
+          success: 0,
+          message: "Error uploading image",
+        });
+      }
+
 })
 // //schema for creating products
 
